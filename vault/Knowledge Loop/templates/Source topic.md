@@ -14,7 +14,7 @@ updated: YYYY-MM-DD
 
 ## Pointers
 - [Title](URL) · source · tier · publication date · stance: for|against|neutral on <claim> · paraphrase (≤2 sentences) · checked YYYY-MM-DD
-- local:4-Knowledge/… · summary · tier · stance · checked YYYY-MM-DD
+- local:<path to your summary note> · summary · tier · stance · checked YYYY-MM-DD
 
 ## Related hypotheses
 - H-<domain>-NNN

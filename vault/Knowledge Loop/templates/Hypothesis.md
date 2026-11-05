@@ -24,7 +24,7 @@ tags: [knowledge-loop]
 
 Uncontaminated: for 0 · against 0 · independent situations 0
 
-## External sources (pointers to 9-Sources)
+## External sources (pointers to the Sources index)
 
 | Pointer | Tier | Verdict | Paraphrase | Strongest counter-argument |
 |---|---|---|---|---|

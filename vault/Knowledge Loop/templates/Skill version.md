@@ -7,7 +7,7 @@ approved: yes | no
 
 # Skill change: skill-name (YYYY-MM-DD)
 
-Target file: `7-Skills/<skill>/YYYY-MM-DD.md`
+Target file: `skills/<skill>/versions/YYYY-MM-DD.md`
 
 **Reason:** lessons from the log (dates / tags) that triggered the change.
 

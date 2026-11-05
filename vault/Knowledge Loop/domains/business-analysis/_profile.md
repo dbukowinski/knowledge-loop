@@ -4,7 +4,7 @@ rhythm: monthly
 source_freshness: 12 months
 hypothesis_dormancy: 12 weeks
 independent_situations: different documents or projects
-wiki_area: 4-Knowledge/Business Analysis (to confirm)
+notes_area: <your BA notes/wiki folder>
 ---
 
 # Domain profile: business-analysis

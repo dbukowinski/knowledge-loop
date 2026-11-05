@@ -4,7 +4,7 @@ rhythm: monthly
 source_freshness: 3 months
 hypothesis_dormancy: 8 weeks
 independent_situations: different tasks or skills
-wiki_area: 4-Knowledge/AI (to confirm)
+notes_area: <your AI notes/wiki folder>
 ---
 
 # Domain profile: ai

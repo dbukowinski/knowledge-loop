@@ -4,7 +4,7 @@ rhythm: weekly | monthly
 source_freshness: 12 months
 hypothesis_dormancy: 8 weeks
 independent_situations: <what counts as an independent situation>
-wiki_area: 4-Knowledge/<area>
+notes_area: <folder with your notes/wiki for this domain>
 ---
 
 # Domain profile: <slug>

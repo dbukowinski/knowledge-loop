@@ -4,7 +4,7 @@ rhythm: weekly
 source_freshness: 12 months
 hypothesis_dormancy: 8 weeks
 independent_situations: different training weeks
-wiki_area: 4-Knowledge/Sport & Training
+notes_area: <your sport notes/wiki folder>
 ---
 
 # Domain profile: sport
@@ -23,7 +23,7 @@ Endurance running (road, trail, ultra), strength training, recovery, training pl
 `source_id`: `activity:<id>` (the platform's activity ID), `vault:<path>` for session notes.
 
 ## Guiding methodology
-The coaching approach you follow — an interpretive frame, not absolute truth. Example: aerobic-base-first mountain/endurance training as described by Uphill Athlete / Evoke Endurance. Knowledge base: wiki `4-Knowledge/Sport & Training` + summaries of your reference materials.
+The coaching approach you follow — an interpretive frame, not absolute truth. Example: aerobic-base-first mountain/endurance training as described by Uphill Athlete / Evoke Endurance. Knowledge base: your sport notes/wiki + summaries of your reference materials.
 
 ## Measurement notes (mountain terrain)
 - Pace and HR from mountain runs are misleading: elevation, descents, heat and muscular fatigue change the picture.

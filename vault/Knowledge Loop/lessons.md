@@ -1,4 +1,4 @@
-# Claude Lessons
+# Lessons
 
 Corrections log for all domains. One line per lesson:
 `- YYYY-MM-DD [skill/domain] Error → Correction → Rule for the future`

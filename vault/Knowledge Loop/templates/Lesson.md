@@ -1,6 +1,6 @@
 # Lesson — entry format
 
-Target file: `8-System/Claude Lessons.md`. One line:
+Target file: `lessons.md`. One line:
 
 ```
 - YYYY-MM-DD [skill/domain] Error → Correction → Rule for the future
