@@ -195,7 +195,7 @@ Wpis tematyczny: `- [Tytuł](URL) · źródło · tier · data publikacji · sta
 ## 7. Konsolidacja i operacje zapisu
 
 ### 7.1 Typy operacji
-Każda aktualizacja to jedna z: `noop` · `dopisz_obserwację` · `nowa_hipoteza` · `aktualizuj_hipotezę` · `nowy_fakt` · `zastąp` · `propozycja` · `zapis_9-sources`. Rytmy logują listę operacji w `_log.md`.
+Każda aktualizacja to jedna z: `noop` · `dopisz_obserwację` · `nowa_hipoteza` · `aktualizuj_hipotezę` · `nowy_fakt` · `zastąp` · `propozycja` · `zapis_zrodel`. Rytmy logują listę operacji w `_log.md`.
 
 ### 7.2 Reguły
 `rules.md` (w każdej domenie) — sekcja **Obowiązujące** (krótko) i **Historia decyzji**. Wpis:
