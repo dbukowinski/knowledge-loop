@@ -9,19 +9,21 @@ wiki_area: 4-Knowledge/Sport & Training
 
 # Domain profile: sport
 
+> Example profile — adapt the scope, data sources and methodology to your own setup.
+
 ## Scope
-Running (trail, ultra), gym, recovery, training plans on the watch platform.
+Endurance running (road, trail, ultra), strength training, recovery, training plans.
 
 ## Observation sources (cost ladder)
-1. Watch platform summaries: training load, recovery, HRV and sleep, resting HR, activity list.
-2. Session notes in the `Sport` folder (feel, RPE, gym, weights), daily plan.
+1. Summaries from your training platform or watch: training load, recovery, HRV and sleep, resting HR, activity list.
+2. Your session notes in the vault (feel, RPE, strength work, weights), daily plan.
 3. Lap data — key sessions only, max 2 per week.
-4. FIT files — only when a hypothesis needs the detail.
+4. Raw activity files (e.g. FIT) — only when a hypothesis needs the detail.
 
-`source_id`: `coros:<activity_id>` for activities, `vault:<path>` for session notes.
+`source_id`: `activity:<id>` (the platform's activity ID), `vault:<path>` for session notes.
 
 ## Guiding methodology
-Evoke Endurance / Scott Johnston (Uphill Athlete) — an interpretive frame, not absolute truth. Knowledge base: wiki `4-Knowledge/Sport & Training` + Evoke PDFs.
+The coaching approach you follow — an interpretive frame, not absolute truth. Example: aerobic-base-first mountain/endurance training as described by Uphill Athlete / Evoke Endurance. Knowledge base: wiki `4-Knowledge/Sport & Training` + summaries of your reference materials.
 
 ## Measurement notes (mountain terrain)
 - Pace and HR from mountain runs are misleading: elevation, descents, heat and muscular fatigue change the picture.

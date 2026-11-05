@@ -10,6 +10,10 @@ Goal: every experience, user correction and external source turns into **verifie
 Cycle: **Observation → Hypothesis (+ counter-hypothesis) → Verification (9-Sources) → Consolidation → Application → (new observation)**.
 In parallel: **Lessons → Skill evolution (with tests)** and **Verification → growing the 9-Sources index**.
 
+## Configuration
+
+The paths below assume an Obsidian-style vault with numbered top-level folders (`4-Knowledge`, `6-Templates`, `7-Skills`, `8-System`, `9-Sources`). Adapt them to your vault. The domains `sport`, `business-analysis` and `ai` are examples — add, remove or rename them in `_domains.md`. Tool-specific IDs (`activity:`, `issue:`) stand for whatever platforms you connect.
+
 ## 0. Router
 
 **Step 1 — domain.** I identify the domain from context, read `8-System/Knowledge Loop/_domains.md`, then ONLY that domain's `_profile.md`.
@@ -84,11 +88,11 @@ In parallel: **Lessons → Skill evolution (with tests)** and **Verification →
 The data cost ladder lives in `_profile.md` (summaries and notes first, details only for a specific hypothesis).
 
 **Observation** = fact + unit + measurement method + date + context + `source_id`. Examples:
-- sport: "2026-11-02 · Z2 60 min · HR +7 bpm vs 4-week average (similar terrain) · day after leg day · coros:<activity_id>"
-- business-analysis: "2026-11-04 · analysis without a process diagram → 9 follow-up questions vs 3 on average · linear:<id>"
+- sport: "2026-11-02 · Z2 60 min · HR +7 bpm vs 4-week average (similar terrain) · day after leg day · activity:<id>"
+- business-analysis: "2026-11-04 · analysis without a process diagram → 9 follow-up questions vs 3 on average · issue:<id>"
 - ai: "2026-11-03 · prompt with negative examples → 0 format corrections in 5 runs · lesson:2026-11-03"
 
-**`source_id`** — deterministic: `coros:<id>`, `vault:<path>`, `linear:<id>`, `lesson:<date>:<n>`, `user:<date>` (user statement). The same `source_id` in the same hypothesis = **noop** (no duplicates).
+**`source_id`** — deterministic: `activity:<id>`, `vault:<path>`, `issue:<id>`, `lesson:<date>:<n>`, `user:<date>` (user statement). The same `source_id` in the same hypothesis = **noop** (no duplicates).
 
 **Confounders:** checklist in the profile. ≥2 confounders → observation is `contaminated`: recorded, but not counted toward promotion thresholds.
 

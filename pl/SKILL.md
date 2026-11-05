@@ -10,6 +10,10 @@ Cel: każde doświadczenie, poprawka użytkownika i źródło zewnętrzne zamien
 Cykl: **Obserwacja → Hipoteza (+ kontrhipoteza) → Weryfikacja (9-Sources) → Konsolidacja → Zastosowanie → (nowa obserwacja)**.
 Równolegle: **Lekcje → Ewolucja skilli (z testami)** oraz **Weryfikacja → rozbudowa 9-Sources**.
 
+## Konfiguracja
+
+Ścieżki zakładają vault w stylu Obsidiana z numerowanymi folderami (`4-Knowledge`, `6-Templates`, `7-Skills`, `8-System`, `9-Sources`). Dostosuj je do swojego vaultu. Domeny `sport`, `praca-ba` i `ai` to przykłady — dodawaj, usuwaj i zmieniaj je w `_domeny.md`. Identyfikatory narzędzi (`aktywnosc:`, `zgloszenie:`) oznaczają dowolne podłączone platformy. Pełna struktura vaultu (wersja angielska) jest w katalogu `vault/` repozytorium.
+
 ## 0. Router
 
 **Krok 1 — domena.** Rozpoznaję domenę z kontekstu, czytam `8-System/Pętla Wiedzy/_domeny.md`, potem TYLKO `_profil.md` tej domeny.
@@ -46,7 +50,7 @@ Równolegle: **Lekcje → Ewolucja skilli (z testami)** oraz **Weryfikacja → r
 
 | Typ | Co | Gdzie |
 |---|---|---|
-| **Epizodyczna** | co się wydarzyło (sesja, dokument, zadanie) | źródła pierwotne: notatki w vaulcie, COROS, Linear, dziennik lekcji — **nie duplikuję**, odwołuję się przez `source_id` |
+| **Epizodyczna** | co się wydarzyło (sesja, dokument, zadanie) | źródła pierwotne: notatki w vaulcie, platforma treningowa, tracker zadań, dziennik lekcji — **nie duplikuję**, odwołuję się przez `source_id` |
 | **Semantyczna** | zmierzone fakty z metodą i datą | `<domena>/_fakty.md` |
 | **Hipotezy** | możliwe wyjaśnienia + kontrhipotezy | `<domena>/Hipotezy/`, `<domena>/_index.md` |
 | **Proceduralna** | zatwierdzone reguły decyzji, wersje skilli | `4-Knowledge/<obszar>/Moje reguły.md`, `7-Skills/` |
@@ -84,11 +88,11 @@ Równolegle: **Lekcje → Ewolucja skilli (z testami)** oraz **Weryfikacja → r
 Drabina kosztów danych jest w `_profil.md` (najpierw podsumowania i notatki, szczegóły tylko dla konkretnej hipotezy).
 
 **Obserwacja** = fakt + jednostka + metoda pomiaru + data + kontekst + `source_id`. Przykłady:
-- sport: „2026-11-02 · Z2 60 min · tętno +7 bpm vs średnia 4 tyg. (podobny teren) · dzień po siłowni nóg · coros:<id_aktywności>”
-- praca-ba: „2026-11-04 · analiza bez diagramu procesu → 9 pytań zwrotnych vs średnio 3 · linear:<id>”
+- sport: „2026-11-02 · Z2 60 min · tętno +7 bpm vs średnia 4 tyg. (podobny teren) · dzień po siłowni nóg · aktywnosc:<id>”
+- praca-ba: „2026-11-04 · analiza bez diagramu procesu → 9 pytań zwrotnych vs średnio 3 · zgloszenie:<id>”
 - ai: „2026-11-03 · prompt z przykładami negatywnymi → 0 poprawek formatu w 5 uruchomieniach · lekcja:2026-11-03”
 
-**`source_id`** — deterministyczny: `coros:<id>`, `vault:<ścieżka>`, `linear:<id>`, `lekcja:<data>:<nr>`, `user:<data>` (wypowiedź użytkownika). Ta sama `source_id` w tej samej hipotezie = **noop** (bez duplikatów).
+**`source_id`** — deterministyczny: `aktywnosc:<id>`, `vault:<ścieżka>`, `zgloszenie:<id>`, `lekcja:<data>:<nr>`, `user:<data>` (wypowiedź użytkownika). Ta sama `source_id` w tej samej hipotezie = **noop** (bez duplikatów).
 
 **Zakłócenia:** checklista w profilu. ≥2 zakłócenia → obserwacja `zanieczyszczona`: zapisuję ją, ale nie liczy się do progów awansu.
 
@@ -202,7 +206,7 @@ Edytuję wpis zamiast dublować; stara wersja idzie do historii.
 Po zapisie sprawdzam wynik narzędzia (lub odczytuję plik, gdy wynik jest niejasny). Nieudany zapis zgłaszam wprost. W odpowiedzi rozdzielam **„zapisano”** od **„proponuję”**.
 
 ### 7.4 Nowe źródło z pełną treścią
-Film/PDF streszczam raz do 4-Knowledge (skill `youtube` lub `process-inbox`) i dodaję wskaźnik `local:` w 9-Sources. Surowy materiał czytam ponownie tylko, gdy streszczenie nie odpowiada na pytanie.
+Film/PDF streszczam raz do 4-Knowledge i dodaję wskaźnik `local:` w 9-Sources. Surowy materiał czytam ponownie tylko, gdy streszczenie nie odpowiada na pytanie.
 
 ## 8. Lekcje — dziennik poprawek
 

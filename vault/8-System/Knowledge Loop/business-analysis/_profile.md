@@ -9,6 +9,8 @@ wiki_area: 4-Knowledge/Business Analysis (to confirm)
 
 # Domain profile: business-analysis
 
+> Example profile — adapt the sources, methodology and approval rules to your team.
+
 ## Scope
 Business and systems analysis, requirements, documentation, stakeholder work, integrations.
 
@@ -18,7 +20,7 @@ Business and systems analysis, requirements, documentation, stakeholder work, in
 3. Issues and comments in the issue tracker (follow-up questions, corrections) — only when a hypothesis needs it.
 4. Full analysis documents — only for a specific hypothesis.
 
-`source_id`: `linear:<id>`, `vault:<path>`, `lesson:<date>:<n>`, `user:<date>`.
+`source_id`: `issue:<id>`, `vault:<path>`, `lesson:<date>:<n>`, `user:<date>`.
 
 ## Guiding methodology
 BABOK (IIBA) as the reference + team/organisation standards (to fill in).

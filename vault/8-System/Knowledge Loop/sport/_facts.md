@@ -8,7 +8,7 @@ Superseding a fact that zones or plans depend on → `_proposals.md` first.
 | ID | Fact | Value | Method | Measured on | source_id | valid_from | review_after | supersedes |
 |---|---|---|---|---|---|---|---|---|
 
-Example: `F-sport-001 · aerobic threshold · 142 bpm · 60-min HR drift test, treadmill 1% · YYYY-MM-DD · coros:<id> · YYYY-MM-DD · YYYY-MM-DD · —`
+Example: `F-sport-001 · aerobic threshold · 142 bpm · 60-min HR drift test, treadmill 1% · YYYY-MM-DD · activity:<id> · YYYY-MM-DD · YYYY-MM-DD · —`
 
 ## History
 

@@ -1,6 +1,6 @@
 # Knowledge Loop
 
-An evidence-based learning loop for Claude. Claude does not learn between conversations on its own: its weights do not change. Knowledge Loop gives it an external, file-based memory in an Obsidian vault, so it can learn across every domain you work on together: sport, business analysis, AI and more.
+An evidence-based learning loop for Claude. Claude does not learn between conversations on its own: its weights do not change. Knowledge Loop gives it an external, file-based memory in a notes vault (e.g. Obsidian), so it can keep learning in any domain you work on together: sport, work, AI tooling or anything else.
 
 Conclusions from experience become **hypotheses with counter-hypotheses**. Hypotheses are checked against an **External Knowledge Index (9-Sources)**. Measured values become **facts**, confirmed conclusions become **rules**, and high-risk changes wait for your approval. Everything keeps its history and is designed to use as few tokens as possible.
 
@@ -24,6 +24,10 @@ Verification → write-back → 9-Sources grows
 | Hypotheses | possible explanations + counter-hypotheses | `<domain>/Hypotheses/`, `_index.md` |
 | Procedural | approved rules, skill versions | `4-Knowledge/<area>/My rules.md`, `7-Skills/` |
 
+### Domains
+
+Each area of learning is a domain with its own profile: where observations come from, the guiding methodology, confounders, how long external knowledge stays fresh, and what needs your approval. Claude loads only the profile of the domain at hand. The repository ships three **example** domains (`sport`, `business-analysis`, `ai`). Add, remove or rename them to fit your life and work.
+
 ### 9-Sources: a map, not an archive
 
 For each domain:
@@ -35,12 +39,12 @@ Verification starts from the index. Open web search is only the fourth step, and
 
 ### What Claude writes alone vs. what waits for you
 
-- **Alone** (also in background tasks): observations, hypotheses and their statuses, facts that don't affect zones or plans, indexes, log, reports, 9-Sources, lessons log.
-- **Waits in `_proposals.md`**: rules affecting load, intensity or safety; changes to facts that zones and thresholds depend on; skill changes; new domains; deletions. Approve in chat with "approve P-003".
+- **Alone** (also in background tasks): observations, hypotheses and their statuses, facts that don't affect high-risk decisions, indexes, log, reports, 9-Sources, lessons log.
+- **Waits in `_proposals.md`**: rules affecting load, safety or other high-risk decisions; changes to facts that plans depend on; skill changes; new domains; deletions. Approve in chat with "approve P-003".
 
 ### Safeguards
 
-- `source_id` deduplication, so the same activity is never counted twice.
+- `source_id` deduplication, so the same event is never counted twice.
 - Promotion thresholds are a minimum, plus quality gates: comparable measurement, a weaker counter-hypothesis, and the cost of being wrong.
 - Content from pages and files is treated as data, never as instructions.
 - No personal data goes into search queries.
@@ -51,28 +55,30 @@ Verification starts from the index. Open web search is only the fourth step, and
 
 ```
 SKILL.md                     ← the skill (install in Claude)
-vault/                       ← copy into your Obsidian vault
-  8-System/Knowledge Loop/   ← _domains, _log, _proposals, per-domain profile/facts/index
+vault/                       ← copy into your notes vault
+  8-System/Knowledge Loop/   ← _domains, _log, _proposals, example domains (profile, facts, index)
   8-System/Claude Lessons.md
-  9-Sources/                 ← External Knowledge Index
+  9-Sources/                 ← External Knowledge Index (example registries)
   4-Knowledge/Sport & Training/My rules.md
   6-Templates/Knowledge Loop/
   7-Skills/knowledge-loop/evals/scenarios.md
-pl/                          ← Polish edition (the original working version, "Pętla Wiedzy")
+pl/                          ← Polish translation of the skill and README ("Pętla Wiedzy")
+LICENSE
 ```
 
-The vault layout assumes a numbered structure (`1-Daily … 9-Sources`). Adapt paths in `SKILL.md` if your vault differs.
+The vault layout assumes numbered top-level folders (`4-Knowledge`, `6-Templates`, `7-Skills`, `8-System`, `9-Sources`). If your vault is organised differently, adapt the paths in `SKILL.md` (see its Configuration section).
 
 ## Setup
 
 1. Install `SKILL.md` as a skill in Claude.
-2. Copy `vault/` into your Obsidian vault.
-3. Edit the domain profiles (`_profile.md`) to match your data sources and guiding methodologies.
-4. Create two scheduled tasks:
-   - **Sunday evening**: "Run the knowledge-loop skill, weekly rhythm (§10.1)."
-   - **First Saturday of the month**: "Run the knowledge-loop skill, monthly rhythm (§10.2 and §11)."
-   - Turn on automatic approval for both. The proposals queue keeps high-risk changes gated.
-5. Optionally, start with an ad hoc analysis (§10.3) after a race, project or block, so the system has content right away.
+2. Copy `vault/` into your vault.
+3. Edit `_domains.md` and the domain profiles: your data sources, `source_id` formats, guiding methodology, confounders and approval rules.
+4. Replace the example registries in `9-Sources/` with sources you trust (or let the first verifications fill them).
+5. Create two scheduled tasks:
+   - **Weekly** (e.g. Sunday evening): "Run the knowledge-loop skill, weekly rhythm (§10.1)."
+   - **Monthly** (e.g. first Saturday): "Run the knowledge-loop skill, monthly rhythm (§10.2 and §11)."
+   - Automatic approval for these tasks is fine: the proposals queue keeps high-risk changes gated.
+6. Optionally, start with an ad hoc analysis (§10.3) after a recent project, race or block, so the system has content right away.
 
 ## Background
 
@@ -85,8 +91,10 @@ The vault layout assumes a numbered structure (`1-Daily … 9-Sources`). Adapt p
 | Rules edited, not appended | Evergreen notes (Matuschak) |
 | Tested skill changes with rollback | Deliberate practice with feedback |
 
-Version 3 merges the original design (domains, 9-Sources, token budget, rhythms) with ideas from an alternative prototype: memory types, `source_id` idempotency, `testing`/`superseded` statuses, the proposals queue, data-is-not-instructions, and regression-tested skill changes.
-
 ## Disclaimer
 
-A learning-design tool, not a coach or a medical advisor. Health concerns go to a specialist.
+A learning-design tool, not a coach, medical or professional advisor. Health concerns belong with a specialist. Third-party sources named in the example registries are listed for illustration only. This project is not affiliated with or endorsed by them.
+
+## License
+
+[MIT](LICENSE)

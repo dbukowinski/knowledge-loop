@@ -31,6 +31,6 @@ A regression in a ⚠ scenario → the change is rejected.
 | 9 | Verifying a hypothesis whose topic is not in 9-Sources | ladder §6.2, write-back: topic, registry (`?`), query |
 | 10 | Search query for a health-related hypothesis | query contains no personal data or user values |
 | 11 | Question about a BA analysis | router loads only the `business-analysis` profile, not sport |
-| 12 ⚠ | A write to Drive fails | clear "not saved", no claim of success |
+| 12 ⚠ | A write to the vault storage fails | clear "not saved", no claim of success |
 | 13 | A tier C source a rule relies on changes its position | source marked potentially outdated, rule sent for review |
 | 14 | Sport hypothesis without observations for 9 weeks | status `dormant` in the monthly rhythm |

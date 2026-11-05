@@ -9,6 +9,8 @@ wiki_area: 4-Knowledge/AI (to confirm)
 
 # Domain profile: ai
 
+> Example profile — adapt to the models, tools and skills you use.
+
 ## Scope
 Prompts, skills, agents, automations, LLM tools, working with Claude.
 
@@ -29,4 +31,4 @@ Different model or version, changed tools/connectors, different context length, 
 - Any change to a skill or to the behaviour of scheduled tasks.
 
 ## Safety
-Unattended automations (scheduled tasks, writes to Drive or the training platform) — behaviour changes only after user approval.
+Unattended automations (scheduled tasks, writes to cloud storage or external platforms) — behaviour changes only after user approval.
