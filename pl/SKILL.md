@@ -94,6 +94,8 @@ Drabina kosztów danych jest w `_profile.md` (najpierw podsumowania i notatki, s
 
 **`source_id`** — deterministyczny: `aktywnosc:<id>`, `vault:<ścieżka>`, `zgloszenie:<id>`, `lekcja:<data>:<nr>`, `user:<data>` (wypowiedź użytkownika). Ta sama `source_id` w tej samej hipotezie = **noop** (bez duplikatów).
 
+**Wiedza domenowa od użytkownika** (case'y, przykłady, opis działania procesu) to obserwacja o domenie: zapisuję ją w tej samej turze z `case:<slug>` lub `user:<data>`, potem sprawdzam §4 pod kątem hipotez-kandydatów. Nie czekam, aż użytkownik o to poprosi.
+
 **Zakłócenia:** checklista w profilu. ≥2 zakłócenia → obserwacja `zanieczyszczona`: zapisuję ją, ale nie liczy się do progów awansu.
 
 ## 4. Hipotezy
@@ -131,7 +133,7 @@ Progi są **minimum**, nie automatem:
 2. **Alternatywy:** kontrhipoteza rozważona i słabiej wspierana.
 3. **Koszt błędu:** reguła wpływająca na obciążenie/bezpieczeństwo/ryzyko → nie zapisuję jej, tylko kieruję do `_proposals.md`.
 
-**Limity:** max 2 nowe hipotezy na domenę tygodniowo, max 15 aktywnych na domenę. Przy przekroczeniu usypiam najstarszą o najniższym wsparciu.
+**Limity:** bez limitu nowych hipotez `kandydat` — zapisuję każdy wiarygodny wzorzec z kontrhipotezą. Limit 15 na domenę dotyczy statusów `testowana` + `wspierana`; przy przekroczeniu usypiam tę o najniższym wsparciu. Kandydaci bez nowych obserwacji są odsiewani w przeglądzie miesięcznym (`odrzucona` z powodem „niepotwierdzona” albo `uśpiona`).
 
 ## 5. Fakty (pamięć semantyczna)
 
@@ -237,7 +239,7 @@ Dla domen z `rytm: tygodniowy`:
 1. `_log.md` (przetworzony zakres) i `_index.md`.
 2. Dane od tej daty, najtańsze poziomy drabiny. Porównanie planu z wykonaniem.
 3. Operacje §7.1 z deduplikacją po `source_id`.
-4. Max 2 nowe hipotezy.
+4. Nowi kandydaci bez limitu; raport wskazuje tylko 3 o największym wpływie.
 5. Raport `Reports/RRRR-Www.md` (≤15 linii): max 3 istotne wnioski, sygnały sprzeczne, otwarte testy, kolejka do weryfikacji, propozycje czekające na zgodę.
 6. `_index.md` i `_log.md` (zakres + operacje).
 
@@ -246,13 +248,13 @@ Dla każdej domeny:
 1. Nowe lekcje → kandydaci na hipotezy.
 2. Audyt: hipotezy, fakty i reguły po `review_after` → potwierdź, oznacz jako nieaktualne albo skieruj do przeglądu.
 3. Weryfikacja `wspierana` (max 3 na domenę, priorytet = wpływ) §6, konsolidacja §7.
-4. Usypianie hipotez bez obserwacji.
+4. Usypianie hipotez bez obserwacji oraz odsiew kandydatów starszych niż okres uśpienia domeny bez nowej obserwacji (odrzucenie z powodem albo uśpienie).
 5. Pielęgnacja indeksu źródeł: tier `?`, max 1 luka na domenę, świeżość max 5 najczęściej używanych wpisów.
 6. Przegląd skilli §11.
 7. `_log.md`.
 
 ### 10.3 Ad hoc — po zawodach, projekcie, bloku
-Pełna analiza (wyjątek od limitów §13): szczegółowe dane, porównanie z planem, max 4 nowe hipotezy, raport.
+Pełna analiza (wyjątek od limitów §13): szczegółowe dane, porównanie z planem, nowi kandydaci bez limitu, raport wymienia max 4 kluczowe.
 
 ## 11. Ewolucja skilli (z testami)
 
@@ -272,6 +274,7 @@ Gdy temat powtarza się ≥3 razy i nie pasuje do istniejących domen → propoz
 
 - Router: `_domains.md` + jeden profil. Nigdy wszystkie domeny naraz (poza rytmami).
 - Na start: indeks, reguły obowiązujące, fakty bieżące, max 3 hipotezy. Poszerzanie jawne.
+- Kandydat to jedna linijka w `_index.md`; pełna notatka hipotezy powstaje dopiero przy statusie `testowana`. Start zadania nadal czyta max 3 hipotezy.
 - Tylko dane od przetworzonego zakresu w `_log.md`.
 - Szczegółowe dane (okrążenia, logi, pełne dokumenty) max 2 na domenę tygodniowo.
 - Rytm tygodniowy bez sieci. WebFetch max 2 strony na hipotezę. `desk-research` max 1 miesięcznie.
@@ -294,3 +297,4 @@ Gdy temat powtarza się ≥3 razy i nie pasuje do istniejących domen → propoz
 - „Zapisano” bez potwierdzonego zapisu.
 - Zmiana reguł wysokiego ryzyka lub skilla bez zgody.
 - Ładowanie wszystkich domen „na wszelki wypadek”.
+- Wiedza domenowa od użytkownika zostawiona tylko w notatkach projektu, bez wejścia do pętli.

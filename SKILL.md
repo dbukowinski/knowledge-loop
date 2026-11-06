@@ -94,6 +94,8 @@ The data cost ladder lives in `_profile.md` (summaries and notes first, details 
 
 **`source_id`** — deterministic: `activity:<id>`, `vault:<path>`, `issue:<id>`, `lesson:<date>:<n>`, `user:<date>` (user statement). The same `source_id` in the same hypothesis = **noop** (no duplicates).
 
+**Domain knowledge from the user** (cases, examples, how a process works) is an observation about the domain: I record it in the same turn with `case:<slug>` or `user:<date>`, then check §4 for candidate hypotheses. I don't wait to be asked.
+
 **Confounders:** checklist in the profile. ≥2 confounders → observation is `contaminated`: recorded, but not counted toward promotion thresholds.
 
 ## 4. Hypotheses
@@ -131,7 +133,7 @@ Thresholds are a **minimum**, not an automatic trigger:
 2. **Alternatives:** counter-hypothesis considered and less supported.
 3. **Cost of error:** a rule affecting load/safety/risk is not written — it goes to `_proposals.md`.
 
-**Limits:** max 2 new hypotheses per domain per week, max 15 active per domain. Beyond that, the oldest with the least support goes dormant.
+**Limits:** no cap on new `candidate` hypotheses — I record every plausible pattern with its counter-hypothesis. The cap of 15 per domain applies to `testing` + `supported`; beyond that, the one with the least support goes dormant. Candidates without new observations are pruned at the monthly review (`rejected` with the reason "not confirmed", or `dormant`).
 
 ## 5. Facts (semantic memory)
 
@@ -237,7 +239,7 @@ For domains with `rhythm: weekly`:
 1. `_log.md` (processed range) and `_index.md`.
 2. Data since that date, cheapest levels of the ladder. Plan vs execution.
 3. Operations §7.1 with deduplication by `source_id`.
-4. Max 2 new hypotheses.
+4. New candidates without a cap; the report flags only the 3 with the highest impact.
 5. Report `Reports/YYYY-Www.md` (≤15 lines): max 3 key findings, conflicting signals, open tests, verification queue, proposals awaiting approval.
 6. `_index.md` and `_log.md` (range + operations).
 
@@ -246,13 +248,13 @@ For every domain:
 1. New lessons → hypothesis candidates.
 2. Audit: hypotheses, facts and rules past `review_after` → confirm, mark outdated or send for review.
 3. Verify `supported` hypotheses (max 3 per domain, priority = impact) §6, consolidate §7.
-4. Put hypotheses without observations to sleep.
+4. Put hypotheses without observations to sleep, and prune candidates older than the domain's dormancy period with no new observation (reject with a reason, or dormant).
 5. Sources index upkeep: tier `?` sources, max 1 gap per domain, freshness of the 5 most used entries.
 6. Skill review §11.
 7. `_log.md`.
 
 ### 10.3 Ad hoc — after a race, project or block
-Full analysis (exception to the §13 limits): detailed data, plan vs execution, max 4 new hypotheses, report.
+Full analysis (exception to the §13 limits): detailed data, plan vs execution, new candidates without a cap, the report lists max 4 key ones.
 
 ## 11. Skill evolution (with tests)
 
@@ -272,6 +274,7 @@ When a topic recurs ≥3 times and fits no existing domain → proposal in `_pro
 
 - Router: `_domains.md` + one profile. Never all domains at once (except in rhythms).
 - To start: index, rules in force, current facts, max 3 hypotheses. Widening is explicit.
+- A candidate is one line in `_index.md`; a full hypothesis note is created only at `testing`. Task start still reads max 3 hypotheses.
 - Only data after the processed range in `_log.md`.
 - Detailed data (laps, logs, full documents) max 2 per domain per week.
 - Weekly rhythm without web. WebFetch max 2 pages per hypothesis. Desk research max once a month.
@@ -294,3 +297,4 @@ When a topic recurs ≥3 times and fits no existing domain → proposal in `_pro
 - "Saved" without a confirmed write.
 - Changing high-risk rules or a skill without approval.
 - Loading every domain "just in case".
+- Domain knowledge from the user kept only in project notes, never reaching the loop.

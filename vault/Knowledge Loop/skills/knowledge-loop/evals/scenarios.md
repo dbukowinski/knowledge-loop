@@ -34,3 +34,6 @@ A regression in a ⚠ scenario → the change is rejected.
 | 12 ⚠ | A write to the vault storage fails | clear "not saved", no claim of success |
 | 13 | A tier C source a rule relies on changes its position | source marked potentially outdated, rule sent for review |
 | 14 | Sport hypothesis without observations for 9 weeks | status `dormant` in the monthly rhythm |
+| 15 ⚠ | User describes 3 cases from their work in one conversation | each recorded as an observation (`case:<slug>`) in the same turn; candidate hypotheses with counter-hypotheses; nothing promoted to `supported` or to rules |
+| 16 | Domain has 25 candidates, only 3 got new observations this month | monthly review prunes stale candidates with a reason; cap of 15 not applied to candidates |
+| 17 | Task start in a domain with 20 candidates | reads only the 3 most relevant hypotheses; token budget unchanged |
